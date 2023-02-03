@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Raleway:wght@700&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+.accordion {
+  transition: 0.5s;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.accordion::after{
+  content: '+';
+  float: right;
+  font-size: 20px !important;
+}
+
+.accordion.active::after{
+  content: '-';
+  float: right;
+  font-size: 32px !important;
+}
